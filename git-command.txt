@@ -1,0 +1,42 @@
+1.  -   리포 생성
+    -   readme.md 생성
+    -   main 브랜치에 PR 룰 걸기
+
+2.  개발자 1을 협력자로 초대
+3.  초대수락
+4.  이슈생성
+
+    -   번호 : 1번
+    -   라벨 : enhancement
+    -   양수인 : 개발자 1
+
+5.  1번 이슈 확인 or 양수인 없는 이슈를 직접 양수
+6.  git clone 깃헙주소 . or (main) git pull origin main
+7.  (main) git checkout -b enhancement/1
+8.  (enhancement/1) 작업
+9.  (enhancement/1) git add .; git commit -m "작업내용"
+10. (enhancement/1) git pull origin main
+11. (enhancement/1) 작업
+12. (enhancement/1) git add .; git commit -m "작업내용"
+13. (enhancement/1) git pull origin main --rebase
+14. (enhancement/1) git push origin enhancement/1 or (enhancement/1) git push origin enhancement/1 -f
+15. 깃허브 접속, pr 생성하라는 버튼 확인
+16. pr 생성(enhancement/1 => main) 양수인과 리뷰어를 프로젝트 매니저로 지정
+17. pr로 들어온 소스코드 확인 PR 리젝(즉 병합거부)
+18. 리젝확인
+19. (enhancement/1) git pull origin main --rebase
+20. (enhancement/1) 작업
+21. (enhancement/1) git add .; git commit -m "작업내용"
+22. (enhancement/1) git pull origin main --rebase
+23. (enhancement/1) git push origin enhancement/1 or (enhancement/1) git push origin enhancement/1 -f
+24. PR 승인
+25. squash merge
+    -   이렇게 해야 커밋결과가 보기 좋게 쌓인다.
+26. delete branch : enhancement/1
+    -   PR을 머지하면 해당 브랜치를 삭제하겠냐고 물어보는데 삭제하는게 좋다.
+27. 이슈 1 닫기(자동으로 닫힐 수 도 있음)
+28. (enhancement/1) git checkout main
+29. (main) git pull origin main
+30. (main) git branch -D enhancement/1
+31. (main) git fetch --prune
+32. 4번 내용부터 다시 반복
